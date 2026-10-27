@@ -97,7 +97,7 @@ export default function FableSection({ fable, done, setDone }: Props) {
         <div className="mt-8 flex flex-col items-center gap-5 no-print">
           <LanguageToggle value={lang} onChange={setLang} label={`Language for Fable ${fable.n} video`} />
           <div className="w-full max-w-2xl">
-            <VideoCard title={title} lang={lang} />
+            <VideoCard title={title} lang={lang} src="/videos/fable.mp4" />
           </div>
         </div>
 

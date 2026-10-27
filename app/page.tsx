@@ -111,7 +111,11 @@ export default function HomePage() {
           <p className="font-heading text-xl font-bold text-ink mb-3">
             🎥 Watch a 2-minute overview of our platform
           </p>
-          <VideoCard title="Platform overview" lang="en" />
+          <VideoCard
+            title="Platform overview"
+            lang="en"
+            src="/videos/overview.mp4"
+          />
         </div>
 
         {/* Feature Highlights Grid */}
