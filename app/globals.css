@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  @apply bg-[#FAFAFA] font-body text-ink antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-heading;
+}
+
+:focus-visible {
+  outline: 3px solid #0e7c8f;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-2xl px-6 py-3 font-heading text-xl font-semibold shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0;
+  }
+  .btn-teal {
+    @apply bg-teal-dark text-white hover:bg-teal;
+  }
+  .btn-orange {
+    @apply bg-orange-dark text-white hover:bg-orange;
+  }
+  .card {
+    @apply rounded-3xl bg-white shadow-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
